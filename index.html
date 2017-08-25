@@ -89,11 +89,17 @@
                 <div class="col">
                     <nav class="main-navigation">
                         <ul class="d-flex justify-content-between">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Shop</a></li>
+                            <li class="current-page"><a href="#">Home</a></li>
+                            <li class="has-child">
+                                <a href="#">Shop</a>
+                                <span class="collapse-menu">
+                                    <i class="fa fa-angle-up fa-angle-down" aria-hidden="true"></i>
+                                </span>
+                            </li>
                             <li><a href="#">News</a></li>
                             <li><a href="#">Service</a></li>
                             <li><a href="#">Guaranties</a></li>
+                            <li><a href="#">About Us</a></li>
                             <li><a href="#">Contacts</a></li>
                         </ul>
                     </nav>
@@ -104,6 +110,21 @@
     <!--!SiteNav-->
 </header>
 
+
+<!--todo Скачать локальные JS библиотеки-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+
+        $('.collapse-menu').on('click', function () {
+
+            $(this).toggleClass('collapsed-menu');
+            $(this).find('i').toggleClass('fa-angle-down');
+
+        });
+
+    });
+</script>
 
 </body>
 </html>
