@@ -8,7 +8,11 @@
     <link rel="stylesheet" href="css/bootstrap-grid.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="css/components.css">
 </head>
 <body>
 <header>
@@ -95,9 +99,33 @@
                                 <span class="collapse-menu">
                                     <i class="fa fa-angle-up fa-angle-down" aria-hidden="true"></i>
                                 </span>
+                                <ul class="sub-menu justify-content-around animated">
+                                    <li class="col-auto">
+                                        <a href="">Shop item 2</a>
+                                        <a href="">Shop item 2</a>
+                                        <a href="">Shop item 2</a>
+                                    </li>
+                                    <li class="col-auto">
+                                        <a href="">Shop item 2</a>
+                                        <a href="">Shop item 2</a>
+                                        <a href="">Shop item 2</a>
+                                    </li>
+                                    <li class="col-auto">
+                                        <a href="">Shop item 2</a>
+                                        <a href="">Shop item 2</a>
+                                        <a href="">Shop item 2</a>
+                                    </li>
+                                    <li class="col-auto">
+                                        <a href="">Shop item 2</a>
+                                        <a href="">Shop item 2</a>
+                                        <a href="">Shop item 2</a>
+                                    </li>
+                                </ul>
                             </li>
                             <li><a href="#">News</a></li>
-                            <li><a href="#">Service</a></li>
+                            <li class="has-child">
+                                <a href="#">Service</a>
+                            </li>
                             <li><a href="#">Guaranties</a></li>
                             <li><a href="#">About Us</a></li>
                             <li><a href="#">Contacts</a></li>
@@ -109,22 +137,118 @@
     </div>
     <!--!SiteNav-->
 </header>
+<!--slider-->
+<section class="slider-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="slider col-10">
+                <div class="slider-item">
+                    <img src="img/slider-img-1.jpg" alt="">
+                    <h3 class="slide-title">text 1</h3>
+                    <p class="col-6 slide-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aperiam
+                        delectus doloremque est ipsam mollitia nulla odit quia, sint ullam?</p>
+                    <a class="col-3 slide-link text-center" href="#">Open Link</a>
+                </div>
+                <div class="slider-item">
+                    <img src="img/slider-img-2.jpg" alt="">
+                    <h3 class="slide-title">text 2</h3>
+                    <p class="col-6 slide-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab cumque
+                        doloribus harum neque officiis quas quos repudiandae sint temporibus vitae.</p>
+                    <a class="col-3 slide-link text-center" href="#">Open Link</a>
+                </div>
+                <div class="slider-item">
+                    <img src="img/slider-img-3.jpg" alt="">
+                    <h3 class="slide-title">text 3</h3>
+                    <p class="col-6 slide-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse explicabo
+                        necessitatibus omnis perferendis quo soluta voluptates? Assumenda at quam repellendus.</p>
+                    <a class="col-3 slide-link text-center" href="#">Open Link</a>
+                </div>
+                <div class="slider-item">
+                    <img src="img/slider-img-4.jpg" alt="">
+                    <h3 class="slide-title">text 4</h3>
+                    <p class="col-6 slide-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet et
+                        expedita laborum laudantium perspiciatis possimus quae qui quis quod velit.</p>
+                    <a class="col-3 slide-link text-center" href="#">Open Link</a>
+                </div>
+                <div class="slider-item">
+                    <img src="img/slider-img-2.jpg" alt="">
+                    <h3 class="slide-title">text 5</h3>
+                    <p class="col-6 slide-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus
+                        adipisci dolor doloremque expedita harum illum inventore placeat quidem repellat tempora?</p>
+                    <a class="col-3 slide-link text-center" href="#">Open Link</a>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="slider-thumbs">
+                    <div class="slider-item">
+                        <img src="img/slider-img-1.jpg" alt="">
+                    </div>
+                    <div class="slider-item">
+                        <img src="img/slider-img-2.jpg" alt="">
+                    </div>
+                    <div class="slider-item">
+                        <img src="img/slider-img-3.jpg" alt="">
+                    </div>
+                    <div class="slider-item">
+                        <img src="img/slider-img-4.jpg" alt="">
+                    </div>
+                    <div class="slider-item">
+                        <img src="img/slider-img-2.jpg" alt="">
+                    </div>
+                </div>
+            </div>
 
+        </div>
+    </div>
+</section>
+<!--!slider-->
+
+<div class="container">
+    <div class="row">
+        <h2 class="section-title col-12">Categories</h2>
+    </div>
+</div>
+<section class="categories">
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-3 category-item"><a href="#"><img src="img/" alt="">
+                <h3 class="category-title">category 1</h3>
+            </a></div>
+            <div class="col-3 category-item"><a href="#"><img src="img/" alt="">
+                <h3 class="category-title">category 2</h3>
+            </a></div>
+            <div class="col-3 category-item"><a href="#"><img src="img/" alt="">
+                <h3 class="category-title">category 3</h3>
+            </a></div>
+            <div class="col-3 category-item"><a href="#"><img src="img/" alt="">
+                <h3 class="category-title">category 4</h3>
+            </a></div>
+            <div class="col-3 category-item"><a href="#"><img src="img/" alt="">
+                <h3 class="category-title">category 5</h3>
+            </a></div>
+            <div class="col-3 category-item"><a href="#"><img src="img/" alt="">
+                <h3 class="category-title">category 6</h3>
+            </a></div>
+            <div class="col-3 category-item"><a href="#"><img src="img/" alt="">
+                <h3 class="category-title">category 7</h3>
+            </a></div>
+            <div class="col-3 category-item"><a href="#"><img src="img/" alt="">
+                <h3 class="category-title">category 8</h3>
+            </a></div>
+        </div>
+    </div>
+</section>
+
+<div class="container">
+    <div class="row">
+        <h2 class="section-title col-12">News</h2>
+    </div>
+</div>
 
 <!--todo Скачать локальные JS библиотеки-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script>
-    $(document).ready(function () {
-
-        $('.collapse-menu').on('click', function () {
-
-            $(this).toggleClass('collapsed-menu');
-            $(this).find('i').toggleClass('fa-angle-down');
-
-        });
-
-    });
-</script>
+<script src="js/slick.min.js"></script>
+<script src="js/common.js"></script>
 
 </body>
 </html>

@@ -143,7 +143,7 @@
           display: block;
           padding: 10px 0;
           text-transform: uppercase;
-          font-size: 16pt;
+          font-size: 15pt;
         }
         &.has-child{
           display: inline-flex;
@@ -167,7 +167,9 @@
                 color: #000;
               }
             }
-            &.collapsed-menu{
+          }
+          &.collapsed-menu{
+            span{
               height: 100%;
               width: 50px;
               border-radius: 0;
@@ -176,6 +178,27 @@
                 color: #000;
                 line-height: 46px;
               }
+            }
+          }
+        }
+        .sub-menu{
+          display: none;
+          position: absolute;
+          top: 50px;
+          left: 0;
+          right: 0;
+          background: #fff;
+          border-left: 1px solid #eee;
+          border-bottom: 1px solid #eee;
+          border-right: 1px solid #eee;
+          animation-duration: .155s;
+          padding: 30px;
+          z-index: 20;
+          li{
+            a{
+              color: @green;
+              font-size: 10pt;
+              padding: 5px;
             }
           }
         }
