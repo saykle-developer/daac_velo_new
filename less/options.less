@@ -1,5 +1,6 @@
 @green: #7bae5d;
-
+@grey : #ccc;
+@darkgrey: #666;
 
 .transition(@time: .2s,@method: ease) {
   -webkit-transition: @time @method;
@@ -12,4 +13,10 @@
   -webkit-border-radius: @value;
   -moz-border-radius: @value;
   border-radius: @value;
+}
+
+.box-shadow(@arguments: 0 5px 10px, @color: #666){
+  -webkit-box-shadow: @arguments @color;
+  -moz-box-shadow: @arguments @color;
+  box-shadow: @arguments @color;
 }

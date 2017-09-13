@@ -1,5 +1,7 @@
 @import (less) "options.less";
-
+header{
+  .box-shadow(0 3px 10px, #eee);
+}
 .green {
   color: @green !important;
 }
@@ -36,7 +38,7 @@
 }
 
 .main-header-nav {
-  background: #eeeeee;
+  background: #fff;
   min-height: 100px;
   .logo {
     p {
@@ -59,17 +61,18 @@
     label {
       margin: 0;
       line-height: 36px;
+      color: @darkgrey;
     }
     input#top-search {
-      border: 1px solid @green;
+      border: 1px solid @grey;
       padding: 5px;
 
     }
     button {
-      background: @green;
+      background: @grey;
       border: 0;
       cursor: pointer;
-      color: #ffffff;
+      color: @darkgrey;
     }
   }
   .user-actions {
@@ -122,7 +125,7 @@
 }
 
 .site-nav {
-  background: @green;
+  background: #fff;
   .main-navigation {
     ul {
       text-decoration: none;
@@ -133,13 +136,13 @@
         &.current-page {
           a {
             padding: 10px 70px;
-            background: #ffffff;
-            color: #000;
+            background: @green;
+            color: #fff;
             text-decoration: underline;
           }
         }
         a {
-          color: #fff;
+          color: #666;
           display: block;
           padding: 10px 0;
           text-transform: uppercase;
@@ -159,7 +162,7 @@
             i{
               margin: 0;
               line-height: 28px;
-              color: #fff;
+              color: #666;
             }
             &:hover{
               background: #ffffff;
@@ -170,13 +173,9 @@
           }
           &.collapsed-menu{
             span{
-              height: 100%;
-              width: 50px;
-              border-radius: 0;
               background: #ffffff;
               i{
-                color: #000;
-                line-height: 46px;
+                color: #666;
               }
             }
           }
@@ -196,7 +195,7 @@
           z-index: 20;
           li{
             a{
-              color: @green;
+              color: @darkgrey;
               font-size: 10pt;
               padding: 5px;
             }

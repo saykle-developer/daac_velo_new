@@ -12,33 +12,44 @@ $(document).ready(function () {
         arrows: false,
         autoplay: true,
         speed: 500,
-        autoplaySpeed: 5000,
-        fade: true,
-        asNavFor: '.slider-thumbs'
-    });
-    $('.slider-thumbs').slick({
-        autoplay: true,
-        speed: 500,
-        arrows: false,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        asNavFor: '.slider',
-        dots: false,
-        focusOnSelect: true,
-        vertical: true,
-        centerMode: true
+        autoplaySpeed: 5000
     });
 
-    $('.slider-thumbs .slick-slide').removeClass('slick-active');
 
-    //set active class to first thumbnail slides
-    $('.slider-thumbs .slick-slide').eq(0).addClass('slick-active');
+    /*
+    * Tabs
+    * */
 
-    // On before slide change match active thumbnail to current slide
-    $('.slider').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
-        var mySlideNumber = nextSlide;
-        $('.slider-thumbs .slick-slide').removeClass('slick-active');
-        $('.slider-thumbs .slick-slide').eq(mySlideNumber).addClass('slick-active');
+    $(function () {
+
+
+        var _tab = $('.tab');
+
+
+        _tab.each(function () {
+
+            var tabBodyId = $(this).data('tabBody');
+
+            $(this).on('click',function () {
+
+
+                _tab.removeClass('active-tab');
+                $(this).toggleClass('active-tab');
+                if(_tab.hasClass('active-tab')){
+                    $(this).find('img').attr('src', $(this).find('img').data('active'));
+                    console.log($(this));
+                }
+                else{
+                    _tab.find('img').attr('src', _tab.find('img').data('inactive'));
+                }
+                $('.tab-body').removeClass('active-tab-body');
+                $(tabBodyId).toggleClass('active-tab-body');
+
+            });
+            console.log(tabBodyId);
+
+        });
+
+
     });
-
 });

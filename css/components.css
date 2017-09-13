@@ -1,7 +1,7 @@
 .section-title {
   margin: 30px 0;
   display: inline-block;
-  font-size: 30pt;
+  font-size: 35pt;
   font-weight: lighter;
 }
 .section-title:after {
@@ -12,10 +12,53 @@
   background: #7bae5d;
   margin-top: 5px;
 }
-.categories .category-item {
-  margin: 20px 0;
+.categories {
+  background: #eee;
 }
-.categories .category-item a {
-  border: 1px solid #7bae5d;
+.categories .tab {
+  margin: 20px 0;
+  cursor: pointer;
+  padding-right: 5px;
+  padding-left: 5px;
+  -webkit-transition: 0.2s ease;
+  -moz-transition: 0.2s ease;
+  -ms-transition: 0.2s ease;
+  -o-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+.categories .tab .tab-title {
+  font-size: 14pt;
+  padding: 0;
+  text-align: center;
+}
+.categories .tab .tab-title span {
+  padding: 5px 8px 15px;
+  display: flex;
+  color: #666;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid #fff;
+}
+.categories .tab .tab-title span img {
+  max-width: 40px;
+  margin-right: 10px;
+}
+.categories .tab.active-tab .tab-title span {
+  color: #7bae5d;
+  border-bottom: 2px solid #7bae5d;
+  -webkit-transition: 0.2s ease;
+  -moz-transition: 0.2s ease;
+  -ms-transition: 0.2s ease;
+  -o-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+.categories .tab:hover .tab-title span {
+  border-bottom: 2px solid #666;
+}
+.categories .tabs-bodies .tab-body {
+  display: none;
+  height: 200px;
+}
+.categories .tabs-bodies .tab-body.active-tab-body {
   display: block;
 }

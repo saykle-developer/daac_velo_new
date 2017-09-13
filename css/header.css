@@ -1,3 +1,8 @@
+header {
+  -webkit-box-shadow: 0 3px 10px #eee;
+  -moz-box-shadow: 0 3px 10px #eee;
+  box-shadow: 0 3px 10px #eee;
+}
 .green {
   color: #7bae5d !important;
 }
@@ -27,7 +32,7 @@
   font-size: 10pt;
 }
 .main-header-nav {
-  background: #eeeeee;
+  background: #fff;
   min-height: 100px;
 }
 .main-header-nav .logo p {
@@ -46,16 +51,17 @@
 .main-header-nav form label {
   margin: 0;
   line-height: 36px;
+  color: #666;
 }
 .main-header-nav form input#top-search {
-  border: 1px solid #7bae5d;
+  border: 1px solid #ccc;
   padding: 5px;
 }
 .main-header-nav form button {
-  background: #7bae5d;
+  background: #ccc;
   border: 0;
   cursor: pointer;
-  color: #ffffff;
+  color: #666;
 }
 .main-header-nav .user-actions .lang a,
 .main-header-nav .user-actions .lang span {
@@ -104,7 +110,7 @@
   left: 0;
 }
 .site-nav {
-  background: #7bae5d;
+  background: #fff;
 }
 .site-nav .main-navigation ul {
   text-decoration: none;
@@ -116,12 +122,12 @@
 }
 .site-nav .main-navigation ul li.current-page a {
   padding: 10px 70px;
-  background: #ffffff;
-  color: #000;
+  background: #7bae5d;
+  color: #fff;
   text-decoration: underline;
 }
 .site-nav .main-navigation ul li a {
-  color: #fff;
+  color: #666;
   display: block;
   padding: 10px 0;
   text-transform: uppercase;
@@ -147,7 +153,7 @@
 .site-nav .main-navigation ul li.has-child span.collapse-menu i {
   margin: 0;
   line-height: 28px;
-  color: #fff;
+  color: #666;
 }
 .site-nav .main-navigation ul li.has-child span.collapse-menu:hover {
   background: #ffffff;
@@ -156,14 +162,10 @@
   color: #000;
 }
 .site-nav .main-navigation ul li.has-child.collapsed-menu span {
-  height: 100%;
-  width: 50px;
-  border-radius: 0;
   background: #ffffff;
 }
 .site-nav .main-navigation ul li.has-child.collapsed-menu span i {
-  color: #000;
-  line-height: 46px;
+  color: #666;
 }
 .site-nav .main-navigation ul li .sub-menu {
   display: none;
@@ -180,7 +182,7 @@
   z-index: 20;
 }
 .site-nav .main-navigation ul li .sub-menu li a {
-  color: #7bae5d;
+  color: #666;
   font-size: 10pt;
   padding: 5px;
 }
