@@ -34,13 +34,17 @@ $(document).ready(function () {
 
 
                 _tab.removeClass('active-tab');
+                _tab.find('img:nth-child(2)').addClass('out');
+                _tab.find('img:nth-child(1)').removeClass('out');
                 $(this).toggleClass('active-tab');
                 if(_tab.hasClass('active-tab')){
-                    $(this).find('img').attr('src', $(this).find('img').data('active'));
+
+                    $(this).find('img:first-child').addClass('out');
+                    $(this).find('img:nth-child(2)').removeClass('out');
                     console.log($(this));
                 }
                 else{
-                    _tab.find('img').attr('src', _tab.find('img').data('inactive'));
+
                 }
                 $('.tab-body').removeClass('active-tab-body');
                 $(tabBodyId).toggleClass('active-tab-body');
