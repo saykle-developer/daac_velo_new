@@ -28,8 +28,9 @@
 .section-title {
   margin: 30px 0;
   display: inline-block;
-  font-size: 35pt;
-  font-weight: lighter;
+  font-size: 18pt;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 .section-title:after {
   content: '';
@@ -39,9 +40,17 @@
   background: #7bae5d;
   margin-top: 5px;
 }
+.show-all {
+  color: #7bae5d;
+  text-decoration: none;
+}
+.show-all:hover {
+  color: #000;
+  text-decoration: none;
+}
 section {
   border-bottom: 1px solid #eee;
-  padding: 20px 0;
+  padding: 40px 0 20px;
 }
 .categories {
   padding-bottom: 60px;
@@ -50,6 +59,10 @@ section {
   position: relative;
   display: block;
   margin-top: 40px;
+  overflow: hidden;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
 }
 .categories a h3 {
   position: absolute;
@@ -64,9 +77,10 @@ section {
   text-align: center;
   font-size: 16pt;
   /* text-shadow: 0 2px 5px #000; */
-  font-weight: normal;
-  background: rgba(255, 255, 255, 0.7);
+  background: #eee;
   padding: 10px;
+  font-weight: bold;
+  z-index: 20;
   -webkit-transition: 0.2s ease;
   -moz-transition: 0.2s ease;
   -ms-transition: 0.2s ease;
@@ -75,9 +89,18 @@ section {
 }
 .categories a img {
   width: 100%;
+  opacity: 1;
+  -webkit-border-radius: 17px;
+  -moz-border-radius: 17px;
+  border-radius: 17px;
+  -webkit-transition: 0.2s ease;
+  -moz-transition: 0.2s ease;
+  -ms-transition: 0.2s ease;
+  -o-transition: 0.2s ease;
+  transition: 0.2s ease;
 }
 .categories a span {
-  display: block;
+  display: none;
   width: 95%;
   height: 95%;
   position: absolute;
@@ -104,13 +127,15 @@ section {
   font-style: normal;
   background-color: transparent;
 }
-.categories a:hover span {
-  padding-top: 20%;
+.categories a:hover h3 {
   color: #ffffff;
-  background: rgba(255, 255, 255, 0.2);
-}
-.categories a:hover span i {
   background: #7bae5d;
+}
+.categories a:hover img {
+  opacity: .9;
+}
+.goods {
+  background: #eee;
 }
 .goods .good {
   position: relative;
@@ -125,9 +150,12 @@ section {
   position: relative;
   display: block;
   padding: 4px;
-  border: 1px solid #eee;
   border-bottom: 0;
   text-decoration: none;
+  -webkit-border-radius: 15px 15px 0 0;
+  -moz-border-radius: 15px 15px 0 0;
+  border-radius: 15px 15px 0 0;
+  background: #ffffff;
 }
 .goods .good > a img {
   width: 100%;
@@ -167,17 +195,20 @@ section {
 }
 .goods .good .usr-actions {
   height: 50px;
-  border: 1px solid #eee;
+  background: #7bae5d;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 4px;
+  -webkit-border-radius: 0 0 15px 15px;
+  -moz-border-radius: 0 0 15px 15px;
+  border-radius: 0 0 15px 15px;
 }
 .goods .good .usr-actions a {
   text-decoration: none;
   font-size: 12pt;
   padding: 5px;
-  color: #000;
+  color: #fff;
 }
 .goods .good .usr-actions a.good-to-cart {
   font-weight: lighter;

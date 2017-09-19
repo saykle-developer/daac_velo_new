@@ -29,8 +29,9 @@
 .section-title {
   margin: 30px 0;
   display: inline-block;
-  font-size: 35pt;
-  font-weight: lighter;
+  font-size: 18pt;
+  font-weight: bold;
+  text-transform: uppercase;
   &:after {
     content: '';
     display: block;
@@ -40,10 +41,18 @@
     margin-top: 5px;
   }
 }
+.show-all{
+  color: @green;
+  text-decoration: none;
+  &:hover{
+    color: #000;
+    text-decoration: none;
+  }
+}
 
 section {
   border-bottom: 1px solid #eee;
-  padding: 20px 0;
+  padding: 40px 0 20px;
 }
 
 .categories {
@@ -52,6 +61,10 @@ section {
     position: relative;
     display: block;
     margin-top: 40px;
+    overflow: hidden;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
     h3 {
       position: absolute;
       bottom: 0;
@@ -65,16 +78,23 @@ section {
       text-align: center;
       font-size: 16pt;
       /* text-shadow: 0 2px 5px #000; */
-      font-weight: normal;
-      background: rgba(255, 255, 255, .7);
+      //background: rgba(255, 255, 255, .7);
+      background: #eee;
       padding: 10px;
+      font-weight: bold;
+      z-index: 20;
       .transition();
     }
     img {
       width: 100%;
+      opacity: 1;
+      -webkit-border-radius: 17px;
+      -moz-border-radius: 17px;
+      border-radius: 17px;
+      .transition();
     }
     span {
-      display: block;
+      display: none;
       width: 95%;
       height: 95%;
       position: absolute;
@@ -99,21 +119,18 @@ section {
     }
     &:hover {
       h3 {
-
-      }
-      span {
-        padding-top: 20%;
         color: #ffffff;
-        background: rgba(255, 255, 255, .2);
-        i {
-          background: @green;
-        }
+        background: @green;
+      }
+      img{
+        opacity: .9;
       }
     }
   }
 }
 
 .goods {
+  background: #eee;
   .good {
     position: relative;
     margin-bottom: 20px;
@@ -122,9 +139,12 @@ section {
       position: relative;
       display: block;
       padding: 4px;
-      border: 1px solid #eee;
       border-bottom: 0;
       text-decoration: none;
+      -webkit-border-radius: 15px 15px 0 0;
+      -moz-border-radius: 15px 15px 0 0;
+      border-radius: 15px 15px 0 0;
+      background: #ffffff;
       img {
         width: 100%;
       }
@@ -164,16 +184,19 @@ section {
     }
     .usr-actions {
       height: 50px;
-      border: 1px solid #eee;
+      background: @green;
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 4px;
+      -webkit-border-radius: 0 0 15px 15px;
+      -moz-border-radius: 0 0 15px 15px;
+      border-radius: 0 0 15px 15px;
       a {
         text-decoration: none;
         font-size: 12pt;
         padding: 5px;
-        color: #000;
+        color: #fff;
         &.good-to-cart {
           font-weight: lighter;
           background: @green;

@@ -1,7 +1,9 @@
 @import (less) "options.less";
-header{
-  .box-shadow(0 3px 10px, #eee);
+
+header {
+  border-bottom: 1px solid #eee;
 }
+
 .green {
   color: @green !important;
 }
@@ -51,8 +53,8 @@ header{
         color: @green;
       }
     }
-    a{
-      &:hover{
+    a {
+      &:hover {
         text-decoration: none;
       }
     }
@@ -135,69 +137,56 @@ header{
         display: inline-block;
         &.current-page {
           a {
-            padding: 10px 70px;
-            background: @green;
-            color: #fff;
-            text-decoration: underline;
+            border-radius: 15px 15px 0 0;
+            color: #7bae5d;
+            border-bottom: 4px solid;
+            margin-bottom: -3px;
           }
         }
         a {
-          color: #666;
+          padding: 10px 25px;
+          color: #000;
+          font-weight: bold;
           display: block;
-          padding: 10px 0;
           text-transform: uppercase;
-          font-size: 15pt;
+          font-size: 12pt;
+          text-decoration: none;
         }
-        &.has-child{
+        &.has-child {
           display: inline-flex;
-          align-items:center;
-          span.collapse-menu{
-            cursor: pointer;
-            margin-left: 10px;
-            height: 30px;
-            width: 30px;
-            text-align: center;
-            border: 1px solid #fff;
-            .transition(.1s, ease);
-            i{
-              margin: 0;
-              line-height: 28px;
-              color: #666;
-            }
-            &:hover{
-              background: #ffffff;
-              i{
-                color: #000;
-              }
+          align-items: center;
+          -webkit-border-radius: 10px 10px 0 0;
+          -moz-border-radius: 10px 10px 0 0;
+          border-radius: 10px 10px 0 0;
+          a{
+            padding: 10px 25px;
+          }
+          &:hover{
+            background: #eee;
+            .sub-menu{
+              display: flex;
             }
           }
-          &.collapsed-menu{
-            span{
-              background: #ffffff;
-              i{
-                color: #666;
+          .sub-menu {
+            display: none;
+            position: absolute;
+            top: 45px;
+            left: 0;
+            right: 0;
+            background: #eeeeee;
+            border-left: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+            border-right: 1px solid #eee;
+            animation-duration: .155s;
+            padding: 30px;
+            z-index: 50;
+            .transition(.4s, ease-in-out);
+            li {
+              a {
+                color: @darkgrey;
+                font-size: 10pt;
+                padding: 5px;
               }
-            }
-          }
-        }
-        .sub-menu{
-          display: none;
-          position: absolute;
-          top: 50px;
-          left: 0;
-          right: 0;
-          background: #fff;
-          border-left: 1px solid #eee;
-          border-bottom: 1px solid #eee;
-          border-right: 1px solid #eee;
-          animation-duration: .155s;
-          padding: 30px;
-          z-index: 20;
-          li{
-            a{
-              color: @darkgrey;
-              font-size: 10pt;
-              padding: 5px;
             }
           }
         }
